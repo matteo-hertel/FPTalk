@@ -1,0 +1,44 @@
+import { Head } from 'mdx-deck'
+import Skyscanner from './layout/SkyscannerLayout'
+import Codemotion from './layout/CodemotionLayout'
+
+export { default as theme } from './themes/default'
+
+<Head>
+  <title>JavaScript Functional Programming: Our misunderstood friend</title>
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@MHDev91' />
+  <meta name='twitter:title' content='JavaScript Functional Programming: Our misunderstood friend' />
+  <meta name='twitter:description' content="Functional Programming in JavaScript, is hard, difficult to understand, and you need a PhD in applied maths to use it in production. In this talk I’ll try to explain why that's not the truth by showing a practical approach to some fundamental FP concepts and how to apply them to your code base today. By the end of the talk you'll hopefully have some understanding on some Functional Programming principles and how to apply them to your code base but most importantly when and how apply those principles" />
+  <meta name='twitter:image' content='TODO: Add image' />
+</Head>
+
+export default Codemotion;
+
+## Matteo Hertel
+### JavaScript Functional Programming:<br /> Our misunderstood friend
+---
+export default Skyscanner;
+---
+# 👋 Henlo
+---
+import {codeTheme} from './styles/baseStyle';
+import {CodeSurfer} from 'mdx-deck-code-surfer';
+
+<CodeSurfer
+title='A bunch of code'
+notes='Some notes'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./snippets/test.js')}
+steps={[
+{notes: "Start with this note"},
+{lines: [12], notes: 'Pls Don\'t'},
+{lines: [18], notes: 'Sthaaaaaaap'}
+]}
+/>
+
+```notes
+Here some notes!
+```

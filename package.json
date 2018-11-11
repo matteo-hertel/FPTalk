@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "fp-talk",
+  "description": "Slides for the Codemotion conference in Berlin 2018",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck"
+  },
+  "author": "Matteo Hertel",
+  "license": "MIT",
+  "devDependencies": {
+    "bpk-tokens": "^27.2.0",
+    "mdx-deck": "^1.6.7",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "prettier": "^1.15.2",
+    "raw-loader": "^0.5.1",
+    "react-icons": "^3.2.2"
+  },
+  "babel": {
+    "ignore": "snippets"
+  }
+}
