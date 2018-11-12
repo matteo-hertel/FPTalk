@@ -1,5 +1,5 @@
 import React from 'react';
-import {colorWhite, fontSizeBase, spacingSm} from 'bpk-tokens/tokens/base.es6';
+import {colorWhite, fontSizeLg, spacingSm} from 'bpk-tokens/tokens/base.es6';
 import ThemeProvider from 'mdx-deck/dist/Provider';
 import {FaTwitter} from 'react-icons/fa';
 
@@ -10,7 +10,7 @@ const Provider = ({children, mode, notes}) => {
       <div
         style={{
           color: colorWhite,
-          fontSize: fontSizeBase,
+          fontSize: fontSizeLg,
           position: 'absolute',
           bottom: spacingSm,
           right: spacingSm,

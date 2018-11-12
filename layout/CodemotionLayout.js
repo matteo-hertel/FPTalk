@@ -1,72 +1,66 @@
 import React from 'react';
-import {Image} from 'mdx-deck';
+import {Flex, Box} from '@rebass/grid';
 
 import CodemotionStyle, {
-  topHalfStyle,
+  asciiStyle,
   bottomHalfStyle,
+  ccLogoStyle,
+  topHalfStyle,
 } from './../styles/CodemotionStyle';
 
 const TopScreen = ({children}) => (
-  <div
-    style={{
-      ...topHalfStyle,
-      marginBottom: '10px',
-      flexDirection: 'column',
-    }}>
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      }}>
-      <p>Berlin | November 20 - 21, 2018</p>
-      <img
-        src="./../assets/codemotionLogo.png"
-        style={{
-          paddingTop: '10px',
-          width: '616px',
-          height: '110px',
-        }}
-      />
-    </div>
-    <div
+  <Flex flexDirection="column" style={{...topHalfStyle}}>
+    <Flex justifyContent="space-between">
+      <Box>
+        <p>Berlin | November 20 - 21, 2018</p>
+      </Box>
+      <Box>
+        <img
+          src="./../assets/codemotionLogo.png"
+          style={{
+            paddingTop: '10px',
+            maxWidth: '100%',
+            maxHeight: '100%',
+          }}
+        />
+      </Box>
+    </Flex>
+    <Flex
       style={{
         textAlign: 'left',
       }}>
       {children}
-    </div>
-  </div>
+    </Flex>
+  </Flex>
 );
 
 const BottomScreen = ({children}) => (
-  <div
-    style={{
-      justifyContent: 'flex-start',
-      ...bottomHalfStyle,
-    }}>
-    <img
-      style={{
-        alignSelf: 'flex-end',
-        height: '75%',
-        width: '75%',
-      }}
-      src="./../assets/CodemotionASCII.png"
-    />
-    <img
-      style={{
-        alignSelf: 'flex-end',
-        height: '39px',
-        width: '164px',
-      }}
-      src="./../assets/ccLogo.png"
-    />
-  </div>
+  <Flex style={{...bottomHalfStyle}}>
+    <Box width={1} style={asciiStyle}>
+      <img
+        style={{
+          maxHeight: '100%',
+          maxWidth: '100%',
+        }}
+        src="./../assets/CodemotionASCII.png"
+      />
+    </Box>
+    <Box width={1 / 4} style={ccLogoStyle}>
+      <img
+        style={{
+          height: '50%',
+          width: '60%',
+        }}
+        src="./../assets/ccLogo.png"
+      />
+    </Box>
+  </Flex>
 );
 const CodemotionLayout = ({children}) => (
-  <div style={CodemotionStyle}>
+  <Flex flexDirection="column" style={CodemotionStyle}>
     <TopScreen>{children}</TopScreen>
     <BottomScreen />
-  </div>
+  </Flex>
 );
 
 export default CodemotionLayout;

@@ -1,6 +1,7 @@
 import {
   spacingBase,
   spacingLg,
+  spacingSm,
   spacingXxl,
   colorWhite,
 } from 'bpk-tokens/tokens/base.es6';
@@ -13,25 +14,28 @@ export const topHalfStyle = {
   paddingBottom: spacingBase,
   paddingLeft: spacingLg,
   paddingRight: spacingLg,
-  display: 'flex',
-  flex: 1,
   backgroundColor: topColor,
 };
 export const bottomHalfStyle = {
+  marginTop: spacingSm,
   paddingTop: spacingBase,
   paddingBottom: spacingXxl,
   paddingLeft: spacingLg,
   paddingRight: spacingLg,
-  justifyContent: 'space-between',
-  display: 'flex',
-  flex: 1,
   backgroundColor: bottomColor,
+  flexGrow: 1,
 };
-
+export const asciiStyle = {
+  alignSelf: 'flex-end',
+  paddingBottom: spacingBase,
+};
+export const ccLogoStyle = {
+  textAlign: 'right',
+  alignSelf: 'flex-end',
+  paddingBottom: spacingBase,
+};
 export default {
   width: '100vw',
   height: '100vh',
-  display: 'flex',
   backgroundColor: colorWhite,
-  flexDirection: 'column',
 };

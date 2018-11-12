@@ -1,20 +1,23 @@
 import React from 'react';
+import {Flex, Box} from '@rebass/grid';
 
 import SkyscannerStyle from './../styles/SkyscannerStyle';
 
 const SkyscannerLayout = ({children}) => (
-  <div style={SkyscannerStyle}>
-    <img
-      src="./../assets/skyscanner.svg"
-      style={{
-        minWidth: '55%',
-        minHeight: '55%',
-        maxWidth: '65%',
-        maxHeight: '65%',
-      }}
-    />
-    {children}
-  </div>
+  <Flex style={SkyscannerStyle}>
+    <Flex flexDirection="column" m="auto">
+      <Box width={1}>
+        <img
+          src="./../assets/skyscanner.svg"
+          style={{
+            maxHeight: '100%',
+            maxWidth: '100%',
+          }}
+        />
+      </Box>
+      {children}
+    </Flex>
+  </Flex>
 );
 
 export default SkyscannerLayout;

@@ -10,8 +10,9 @@
     "help": "mdx-deck"
   },
   "author": "Matteo Hertel",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "devDependencies": {
+    "@rebass/grid": "^6.0.0-4",
     "bpk-tokens": "^27.2.0",
     "mdx-deck": "^1.6.7",
     "mdx-deck-code-surfer": "^0.5.3",
