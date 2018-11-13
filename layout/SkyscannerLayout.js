@@ -5,17 +5,18 @@ import SkyscannerStyle from './../styles/SkyscannerStyle';
 
 const SkyscannerLayout = ({children}) => (
   <Flex style={SkyscannerStyle}>
-    <Flex flexDirection="column" m="auto">
+    <Flex flexDirection="column" m="auto" p={24}>
       <Box width={1}>
         <img
           src="./../assets/skyscanner.svg"
           style={{
-            maxHeight: '100%',
-            maxWidth: '100%',
+            minWidth: '1200px',
+            maxHeight: '80%',
+            maxWidth: '80%',
           }}
         />
       </Box>
-      {children}
+      <Box pt={100}>{children}</Box>
     </Flex>
   </Flex>
 );
