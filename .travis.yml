@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - lts/dubnium
+env:
+  global:
+    - NPM_CONFIG_LOGLEVEL=warn
+install:
+  - npm install
+  - npm run build -- --no-html
+  - cp ./assets ./dist/ 
+script:
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $DEPLOY_TOKEN
+  on:
+    branch: master
+  local_dir: dist/
+  skip_cleanup: true
+  detect_encoding: true
+  target-branch: gh-pages
+
