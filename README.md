@@ -9,9 +9,4 @@ By the end of the talk you'll hopefully have some understanding on some Function
 
 ## Copyright
 
-I'm a big fan of Open Source and what it stands for, therefore the content of this talk is released under the Apache 2.0 license with the two following exceptions:
-
-- Skyscanner logo/brand/copy
-- Codemotion logo/brand/copy
-
-The above-mentioned content belongs to its respective owners.
+I'm a big fan of Open Source and what it stands for, therefore the content of this talk is released under the Apache 2.0 license, please carefully read the [license](./LICENSE)
