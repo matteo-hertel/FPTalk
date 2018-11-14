@@ -7,7 +7,7 @@ env:
 install:
   - npm install
   - npm run build -- --no-html
-  - cp ./assets ./dist/ 
+  - cp -R assets dist/
 script:
 cache:
   directories:
