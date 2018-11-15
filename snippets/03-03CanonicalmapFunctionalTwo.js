@@ -1,6 +1,6 @@
 const numbers = [1, 2, 3, 4, 5];
 
-const doubles = numbers.map(double);
+const doubles = numbers.map(number => double(number));
 
 console.log(doubles);
 
