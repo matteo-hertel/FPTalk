@@ -8,7 +8,7 @@ const SkyscannerLayout = ({children}) => (
     <Flex flexDirection="column" m="auto" p={24}>
       <Box width={1}>
         <img
-          src="./../assets/skyscanner.svg"
+          src="./assets/skyscanner.svg"
           style={{
             minWidth: '1200px',
             maxHeight: '80%',

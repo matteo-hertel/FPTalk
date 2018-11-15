@@ -16,7 +16,7 @@ const TopScreen = ({children}) => (
       </Box>
       <Box>
         <img
-          src="./../assets/codemotionLogo.png"
+          src="./assets/codemotionLogo.png"
           style={{
             paddingTop: '10px',
             maxWidth: '100%',
@@ -42,7 +42,7 @@ const BottomScreen = ({children}) => (
           maxHeight: '100%',
           maxWidth: '100%',
         }}
-        src="./../assets/CodemotionASCII.png"
+        src="./assets/CodemotionASCII.png"
       />
     </Box>
     <Box width={1 / 4} style={ccLogoStyle}>
@@ -51,7 +51,7 @@ const BottomScreen = ({children}) => (
           height: '50%',
           width: '60%',
         }}
-        src="./../assets/ccLogo.png"
+        src="./assets/ccLogo.png"
       />
     </Box>
   </Flex>
