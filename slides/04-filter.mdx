@@ -1,0 +1,93 @@
+import { Appear } from 'mdx-deck'
+import { Head } from 'mdx-deck'
+import { Image } from 'mdx-deck'
+import {CodeSurfer} from 'mdx-deck-code-surfer';
+import {Flex, Box} from '@rebass/grid';
+import {codeTheme} from './../styles/baseStyle';
+import Codemotion from './../layout/CodemotionLayout'
+import ImageOnlyLayout from './../layout/ImageOnlyLayout'
+import Skyscanner from './../layout/SkyscannerLayout'
+
+
+export default ImageOnlyLayout
+
+## Filter
+<img style={{minWidth:'60%'}} src='./assets/Filter.svg' />
+---
+<CodeSurfer
+title="💡"
+notes='Imperative way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/05-01CanonicalfilterImperative.js')}
+/>
+
+```notes
+Imperative way for loop
+```
+---
+<CodeSurfer
+title="💡"
+notes='More functional way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/05-02CanonicalfilterFunctionalOne.js')}
+/>
+
+```notes
+Functional way filter
+```
+---
+<CodeSurfer
+title="💡"
+notes='Even better functional way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/05-03CanonicalfilterFunctionalTwo.js')}
+/>
+
+```notes
+Even better FP
+```
+---
+<CodeSurfer
+title="💡"
+notes='Imperative way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/06-01filterImperative.js')}
+/>
+
+```notes
+more real life imperative
+```
+---
+<CodeSurfer
+title="💡"
+notes='Imperative way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/06-02filterFunctionalOne.js')}
+/>
+
+```notes
+more real life functional
+```
+---
+<CodeSurfer
+title="💡"
+notes='Imperative way'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/06-03filterFunctionalTwo.js')}
+/>
+
+```notes
+more real life even better functional
+```
