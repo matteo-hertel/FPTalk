@@ -1,8 +1,11 @@
 import { Head } from 'mdx-deck'
 import {CodeSurfer} from 'mdx-deck-code-surfer';
 import Skyscanner from './layout/SkyscannerLayout'
+import ImageOnlyLayout from './layout/ImageOnlyLayout'
 import Codemotion from './layout/CodemotionLayout'
 import {codeTheme} from './styles/baseStyle';
+import { Image } from 'mdx-deck'
+import {Flex, Box} from '@rebass/grid';
 
 export { default as theme } from './themes/default'
 
@@ -73,7 +76,6 @@ No math will be harmed in this talk
 This is just the tip of the iceberg
 ```
 ---
-import { Image } from 'mdx-deck'
 
 <Image size='100%' src='./assets/JustTheBeginning.gif' />
 ---
@@ -124,6 +126,21 @@ Time slot 3 minutes
 List reson for javascript being awesome:
 - FP from SCHEMA
 - OOP and FP can mix and that's some of the true strenght
+---
+export default ImageOnlyLayout
+
+## Map
+<img style={{minWidth:'60%'}} src='./assets/Map.svg' />
+---
+export default ImageOnlyLayout
+
+## Filter
+<img style={{minWidth:'60%'}} src='./assets/Filter.svg' />
+---
+export default ImageOnlyLayout
+
+## Reduce
+<img style={{minWidth:'50%'}} src='./assets/Reduce.svg' />
 ---
 <CodeSurfer
 title="💡"
