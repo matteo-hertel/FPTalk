@@ -48,6 +48,9 @@ export default {
     button: {
       display: 'none',
     },
+    li: {
+      textAlign: 'left',
+    },
     '& .Slide > div': {
       minWidth: '80vw',
       minHeight: '60vh',

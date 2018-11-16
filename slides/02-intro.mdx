@@ -13,14 +13,21 @@ import Skyscanner from './../layout/SkyscannerLayout'
 <ul>
 <Appear>
   <li>No math!</li>
+  <li><i>some</i> FP terminology</li>
+  <li>Walk away with something you can use today</li>
   <li>This is <b>not</b> a comprehensive FP talk</li>
 </Appear>
 </ul>
 
 ```notes
-Before the Functional Programming police takes me in for questioning let me set the expectation
-No math will be harmed in this talk
-This is just the tip of the iceberg
+Before the Functional Programming police takes me in for questioning let me set the expectation:
+
+- No math will be harmed in this talk, functional programming uses mathematical concepts it's true but in my opinion they make things harder to understand
+
+- I will cover however some terminology, so when somebody tells you that he create a new binary function you don't look at that person like an alien 
+
+- With this talk I aim to give you something that can either make you understand better Functional Programming or ideas on how to make your code more functional
+This is not a comprehensive FP talk but (next slide) it's just the beginning 
 ```
 ---
 
@@ -29,37 +36,33 @@ This is just the tip of the iceberg
 ## So why Functional Programming?
 
 ```notes
-Time slot 2 minutes
-Warning: the following snippets contains PHP!
-Just to give you a bit of context and make you understand where I'm coming from
+Time slot 4 minutes
+```
+---
+## Declarative rather than Imperative
+<ul>
+<Appear>
+  <li>Imperative: how to achieve something?</li>
+  <li>Declarative: what should be achieved?</li>
+</Appear>
+</ul>
+
+```notes
+I can spend hours explaining why FP should be used but I think the most important one (at least for me is Declarative Vs Imperative) how to achieve somenting vs what should be achieved, I struggled a lot to find an example that wasn't the usual for loop to show the impertative approach and and the use of the map function to show the declarative approach so I went for something different but hopefully will send a better message 
 ```
 ---
 <CodeSurfer
-title="PHP?!"
-notes="Please don't panic"
-lang='php'
+title="Testing framework are sooo declarative"
+lang='javascript'
 theme={codeTheme}
 showNumbers
-code={require('raw-loader!./../snippets/01.php')}
+code={require('raw-loader!./../snippets/01-imperative-declarative.js')}
 />
 
 ```notes
-In another life I was a PHP developer, where to loop over an array the foreach is the most common way.
-I always tought, there has to be better way to do this
-```
----
-<CodeSurfer
-title="💡"
-notes='No more PHP I promise'
-lang='php'
-theme={codeTheme}
-showNumbers
-code={require('raw-loader!./../snippets/02.php')}
-/>
 
-```notes
-I found out that the array_walk function can iterate throgh an array and pass a callback to each item, I fell in love with that particular function.
 ```
+## 
 ---
 ## And why JavaScript?
 
@@ -67,9 +70,13 @@ I found out that the array_walk function can iterate throgh an array and pass a 
 Time slot 3 minutes
 ```
 ---
-#### Why didn't you choose <br/> {insert here super cool Functional Programming Language} rather than JavaScript?
-#### It's so much better because <br />{list here reason why other languages are better than JS}
+ Why didn't you choose <br/> <b>{insert here super cool Functional Programming Language}</b> rather than JavaScript?
+
+<br />
+
+ X it's so much better because <br /><b>{list here reasons why other languages are better than JS}</b>
 ---
 List reson for javascript being awesome:
+JavaScript is multi-paradigm programming language (Object-Oriented Programming and Functional Programming live in harmony)
 - FP from SCHEMA
 - OOP and FP can mix and that's some of the true strenght
