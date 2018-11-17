@@ -16,7 +16,7 @@ const TopScreen = ({children}) => (
       </Box>
       <Box>
         <img
-          src="./assets/codemotionLogo.png"
+          src="./assets/CodemotionLogo.png"
           style={{
             paddingTop: '10px',
             maxWidth: '100%',
