@@ -8,47 +8,62 @@ import Codemotion from './../layout/CodemotionLayout'
 import ImageOnlyLayout from './../layout/ImageOnlyLayout'
 import Skyscanner from './../layout/SkyscannerLayout'
 
-## Setting the expectations
-
+## We'll cover: 
 <ul>
 <Appear>
-  <li>No math!</li>
+  <li>The one reason I think FP make code better</li>
   <li><i>some</i> FP terminology</li>
-  <li>Walk away with something you can use today</li>
-  <li>This is <b>not</b> a comprehensive FP talk</li>
+  <li>How you can start using FP concepts today</li>
 </Appear>
 </ul>
 
 ```notes
-Before the Functional Programming police takes me in for questioning let me set the expectation:
+This is not a comprehensive FP talk, I don't even think I'm able to run an in-depth talk about FP.
 
-- No math will be harmed in this talk, functional programming uses mathematical concepts it's true but in my opinion they make things harder to understand
+This talk aims to make the people understand what Functional Programming is and what it stands for and hopefully give you some real world tips that you can use in your code today. 
 
-- I will cover however some terminology, so when somebody tells you that he create a new binary function you don't look at that person like an alien 
-
-- With this talk I aim to give you something that can either make you understand better Functional Programming or ideas on how to make your code more functional
-This is not a comprehensive FP talk but (next slide) it's just the beginning 
+We'cover three main areas:
+- The one reason I think functional programming makes my code better, there are so many things that we can talk about but I chose to focus on only one that in my opinion is the most important
+- There will be no math in this talk but I'd like to cover some of the fundamental keywords about functional programming to make the communication more effective
+- I'll then show you how you can start using what we'll cover in your code
 ```
 ---
-
 <Image size='80%' src='./assets/door.jpg' />
+
+```notes
+Before talking about the one reason functional programming makes code better a little disclaimer: This is not a comprehensive functional programming talk, this talk is  what I learnt from banging my head against the wall for past couple of years and help you not doing the same
+
+Also, when I wrote "the one reason" in the slide I had to put a Matrix reference or could not  live wiht myself
+```
 ---
-## So why Functional Programming?
+## The one reason I think FP make code better
 
 ```notes
 Time slot 4 minutes
 ```
 ---
-## Declarative rather than Imperative
+## FP is declarative rather than imperative
 <ul>
 <Appear>
-  <li>Imperative: how to achieve something?</li>
-  <li>Declarative: what should be achieved?</li>
+  <li>Imperative: how to achieve something</li>
+  <li>Declarative: what should be achieved</li>
 </Appear>
 </ul>
 
 ```notes
-I can spend hours explaining why FP should be used but I think the most important one (at least for me is Declarative Vs Imperative) how to achieve somenting vs what should be achieved, I struggled a lot to find an example that wasn't the usual for loop to show the impertative approach and and the use of the map function to show the declarative approach so I went for something different but hopefully will send a better message 
+It can be simply explained like this: FP is declarative rather than imperative.
+
+Hopefully I didn't let you down if you were expecting some secret magic reason but this, in my view, is the best reason.
+
+What's impertative? Imperative is telling the computer how to achieve something.
+What's declarative? Declartive is telling  the computer what should happen.
+
+It turnes out the humans brain is exceptiaally good at figure out what needs to happen but is not very capable of getting there in the most efficient way, but it also turnes out the computer is unbelivably good and following instructions so we should let the computer doing it's thing and not getting in it's way too much.
+
+When talking about imperative vs declarative there is one example that made me go ah-ha: Writing CSS.
+When I write CSS properties I describe what something should look like rather than how to make that happen, if I set the backgorund colour of this slide to be a lovely gradient I'm not telling the CSS engine how to set the colour of the different pixels but only what it should look like 
+
+I struggled a lot to find an example that wasn't the usual for loop to show the impertative approach and and the use of the map function to show the declarative approach so I went for something different but hopefully will send a better message: Testing Frameworks
 ```
 ---
 <CodeSurfer
@@ -64,19 +79,42 @@ code={require('raw-loader!./../snippets/01-imperative-declarative.js')}
 ```
 ## 
 ---
-## And why JavaScript?
+## Pure Function
+
+<ul>
+<Appear>
+<li>Given the same input, the function returns the same output</li>
+<li>The function doesn't cause side effects outside of the function's scope</li>
+</Appear>
+</ul>
 
 ```notes
-Time slot 3 minutes
+now as promised, some terminology:
+
+A pure function is a function that satisfies the following conditions:
+
+Given the same input, the function returns the same output
+
+The function doesn't cause side effects outside of the function's scope
 ```
 ---
- Why didn't you choose <br/> <b>{insert here super cool Functional Programming Language}</b> rather than JavaScript?
+## Expression of Itent
 
-<br />
+<ul>
+<Appear>
+<li>Predicate function</li>
+<li>Mapper Function</li>
+<li>Reducer Function</li>
+</Appear>
+</ul>
 
- X it's so much better because <br /><b>{list here reasons why other languages are better than JS}</b>
----
-List reson for javascript being awesome:
-JavaScript is multi-paradigm programming language (Object-Oriented Programming and Functional Programming live in harmony)
-- FP from SCHEMA
-- OOP and FP can mix and that's some of the true strenght
+```notes
+There are some specific names in functional programming that make the communication much easier, for instance:
+- A predicate function, a function that returns either true or false
+
+- A mapper function, a function that transforms the input and returns an output
+
+- A reducer function, a function that combines (or reduces) two values into one 
+
+Now this might be a lot to take in in one go but don't worry, I'll explain it a bit better when we'll go through some code.
+```

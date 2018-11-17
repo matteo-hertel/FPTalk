@@ -7,17 +7,19 @@ const Provider = ({children, mode, notes}) => {
   return (
     <ThemeProvider mode notes>
       {children}
-      <div
-        style={{
-          color: colorWhite,
-          fontSize: fontSizeLg,
-          position: 'absolute',
-          bottom: spacingSm,
-          right: spacingSm,
-        }}>
-        <FaTwitter style={{marginBottom: '-3px'}} />
-        @MHDev91
-      </div>
+      {mode !== 'PRESENTER' && (
+        <div
+          style={{
+            color: colorWhite,
+            fontSize: fontSizeLg,
+            position: 'absolute',
+            bottom: spacingSm,
+            right: spacingSm,
+          }}>
+          <FaTwitter style={{marginBottom: '-3px'}} />
+          @MHDev91
+        </div>
+      )}
     </ThemeProvider>
   );
 };
