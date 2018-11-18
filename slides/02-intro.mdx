@@ -12,7 +12,7 @@ import Skyscanner from './../layout/SkyscannerLayout'
 <ul>
 <Appear>
   <li>The one reason why I think FP makes code better</li>
-  <li><i>some</i> FP terminology</li>
+  <li><i>Some</i> FP terminology</li>
   <li>How you can start using FP concepts today</li>
 </Appear>
 </ul>
@@ -74,6 +74,16 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/01-imperative-declarative.js')}
+steps={
+[
+{notes:''},
+{lines:[3]},
+{lines:[4]},
+{lines:[5]},
+{lines:[7]},
+{lines: [13]}
+]
+}
 />
 
 ```notes
@@ -143,15 +153,13 @@ Some of you might say, well I'll just use const in my code and I'm good, unfortu
 And let's get some terminology out of the way:
 ```
 ---
-## Expression of Itent
+## Expression of Intent
 
-<ul>
 <Appear>
-<li>Predicate function</li>
-<li>Mapper Function</li>
-<li>Reducer Function</li>
+<span>Predicate, </span>
+<span>Mapper</span>
+<span> and Reducer Functions</span>
 </Appear>
-</ul>
 
 ```notes
 There are some specific names in functional programming that make the communication much easier, for instance:

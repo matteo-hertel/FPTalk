@@ -1,4 +1,4 @@
-// Impertaitve
+// Imperative
 test('The answer to the Ultimate Question of Life is 42', () => {
   const answer = getAnswer();
   if (answer !== 42) {
@@ -8,7 +8,7 @@ test('The answer to the Ultimate Question of Life is 42', () => {
   }
 });
 
-// Declerative
+// Declarative
 test('The answer to the Ultimate Question of Life is 42', () => {
   expect(getAnswer()).toBe(42);
 });
