@@ -7,12 +7,12 @@ const friendlyMessage = cities.reduce(
 );
 
 console.log(friendlyMessage);
-
-function addBulletPoint(string, item) {
-  return (string += `\n - ${item}`);
-}
 // In my life I lived in:
 // - Torino
 // - London
 // - Dubai
 // - London
+
+function addBulletPoint(string, item) {
+  return (string += `\n - ${item}`);
+}

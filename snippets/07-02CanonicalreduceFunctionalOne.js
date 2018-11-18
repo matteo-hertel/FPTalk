@@ -4,5 +4,4 @@ const total = numbers.reduce((accumulator, number) => {
   return (accumulator += number);
 }, 0);
 
-console.log(total);
-// 15
+console.log(total); // 15

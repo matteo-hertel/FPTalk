@@ -1,7 +1,6 @@
 import React from 'react';
 import {colorWhite, fontSizeLg, spacingSm} from 'bpk-tokens/tokens/base.es6';
 import ThemeProvider from 'mdx-deck/dist/Provider';
-import {FaTwitter} from 'react-icons/fa';
 
 const Provider = ({children, mode, notes}) => {
   return (
@@ -16,7 +15,6 @@ const Provider = ({children, mode, notes}) => {
             bottom: spacingSm,
             right: spacingSm,
           }}>
-          <FaTwitter style={{marginBottom: '-3px'}} />
           @MHDev91
         </div>
       )}

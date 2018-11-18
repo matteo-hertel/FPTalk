@@ -5,5 +5,4 @@ for (let number of numbers) {
   total += number;
 }
 
-console.log(total);
-// 15
+console.log(total); // 15

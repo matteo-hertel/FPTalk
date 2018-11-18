@@ -8,6 +8,11 @@ const friendlyMessage = cities
   }, 'In my life I lived in: ');
 
 console.log(friendlyMessage);
+//In my life I lived in:
+// - TORINO
+// - LONDON
+// - DUBAI
+// - LONDON
 
 function shout(string) {
   return string.toUpperCase();
@@ -18,8 +23,3 @@ function haveILivedIn(city) {
 function addBulletPoint(string, item) {
   return (string += `\n - ${item}`);
 }
-//In my life I lived in:
-// - TORINO
-// - LONDON
-// - DUBAI
-// - LONDON

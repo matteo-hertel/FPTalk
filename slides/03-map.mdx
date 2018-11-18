@@ -16,25 +16,37 @@ A simple example: Double the numbers in an array.
 <img style={{minWidth:'50%'}} src='./assets/Map.svg' />
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Doubling the numbers in a list: 🙅"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/03-01CanonicalmapImperative.js')}
+steps={[
+{notes:'A for loop is one of the most imperative ways to do this'},
+{lines:[1]},
+{lines:[2]},
+{range:[4,5,6]},
+{range:[8,9]},
+]}
 />
 
 ```notes
-Imperative way for loop
+A for loop is one of the most imperative ways to this
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='More functional way'
+title="Doubling the numbers in a list 🤔"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/03-02CanonicalmapFunctionalOne.js')}
+steps={[
+{notes:'A functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{3: [8,9,10,11,12,13]}},
+{range:[5,6]},
+]}
 />
 
 ```notes
@@ -42,12 +54,19 @@ Functional way map
 ```
 ---
 <CodeSurfer
-title="💡"
+title="Doubling the numbers in a list 💯"
 notes='Even better functional way'
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/03-03CanonicalmapFunctionalTwo.js')}
+steps={[
+{notes:'A functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{3: [8,9,10,11,12,13]}},
+{range:[5,6]},
+]}
 />
 
 ```notes
@@ -55,8 +74,8 @@ Even better FP
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Imperative Way"
+notes='A for loop is one of the most impertative way to go through a list'
 lang='javascript'
 theme={codeTheme}
 showNumbers

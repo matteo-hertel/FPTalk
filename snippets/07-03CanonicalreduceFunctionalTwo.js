@@ -9,5 +9,4 @@ function sum(a, b) {
   return a + b;
 }
 
-console.log(total);
-// 15
+console.log(total); // 15
