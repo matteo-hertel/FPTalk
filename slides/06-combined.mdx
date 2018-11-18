@@ -1,0 +1,83 @@
+import { Appear } from 'mdx-deck'
+import { Head } from 'mdx-deck'
+import { Image } from 'mdx-deck'
+import {CodeSurfer} from 'mdx-deck-code-surfer';
+import {Flex, Box} from '@rebass/grid';
+import {codeTheme} from './../styles/baseStyle';
+import Codemotion from './../layout/CodemotionLayout'
+import ImageOnlyLayout from './../layout/ImageOnlyLayout'
+import Skyscanner from './../layout/SkyscannerLayout'
+
+## Reduce
+Let's put everything togheter
+---
+<CodeSurfer
+title="💡"
+notes='Filter And Reduce'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/09-combined-filter-reduce.js')}
+/>
+
+```notes
+As you remembter I had to omit Edinburgh from the original array while explaingnin the reduce operation, but now we know both filter and reducte we can combine them to achieve our results
+```
+---
+<CodeSurfer
+title="💡"
+notes='Map Filter and Reduce'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/10-combined-all.js')}
+/>
+
+```notes
+You'll soon realise there are endless possibility whith map filter and reduce, let's add map to the previous snippet: 
+```
+---
+<CodeSurfer
+title="💡"
+notes='Improvement: extract logic to single pure functions'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/11-combined-allTwo.js')}
+/>
+
+```notes
+And as we did before let's make our code easier to test by extracting the logic in their own functions
+```
+---
+## Can we improving it any further? 🤔
+---
+<CodeSurfer
+title=""
+notes='A point is a parameter-argument mapping'
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/11-combined-allTwo.js')}
+/>
+
+```notes
+This is looking pretty good already, and we should be proud of what we achieved, but there is some more room for improvement that can make your code even better:
+
+- every time we're creating an arrow function we're passing the function parameter straight to as function argument, the keyword to describe the parameter-argument mapping is point.
+
+Wouldn't be awesome if we could remove some of that visual clutter?
+```
+---
+<CodeSurfer
+title="Introducing: Point-Free Stle"
+notes=''
+lang='javascript'
+theme={codeTheme}
+showNumbers
+code={require('raw-loader!./../snippets/12-point-free.js')}
+/>
+
+```notes
+Introducing point free stlye! By removin the callback function in map, filter and reduce we removed that point, and we're passing the callback function straight through  the end result is the same but our code is much more readable now, we don't have to some unecessary brain work and reason with the callback function, we can fluently read the source code like a story and fully undestand what's happening, if we're really interested in reading how the callback functions are implemented we can then look at them and reason with them as single pure function 
+```
