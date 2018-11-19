@@ -1,4 +1,5 @@
 import {
+  colorBlue300,
   colorBlue900,
   colorGray300,
   colorRed300,
@@ -28,7 +29,7 @@ export default {
   monospace: codeBlockFont,
   colors: {
     text: colorWhite,
-    link: colorBlue900,
+    link: colorBlue300,
     code: colorRed300,
   },
   css: {

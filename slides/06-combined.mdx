@@ -17,10 +17,17 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/09-combined-filter-reduce.js')}
+steps={[
+{notes:''},
+{tokens:{4: [2]}},
+{tokens:{5: [2]}},
+{notes: `Done!`}
+]}
 />
 
 ```notes
-As you remembter I had to omit Edinburgh from the original array while explaingnin the reduce operation, but now we know both filter and reducte we can combine them to achieve our results
+Notice the missing city in the previous slide?
+removed EDI from the list of city, how aout combining filter and reduce?
 ```
 ---
 <CodeSurfer
@@ -29,6 +36,13 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/10-combined-all.js')}
+steps={[
+{notes:''},
+{tokens:{4: [2]}},
+{tokens:{5: [2]}},
+{tokens:{6: [2]}},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -42,6 +56,16 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/11-combined-allTwo.js')}
+steps={[
+{notes:''},
+{tokens:{4: [2,7]}},
+{tokens:{20: [3]}},
+{tokens:{5: [2,7]}},
+{tokens:{17: [3]}},
+{tokens:{6: [2,7]}},
+{tokens:{23: [3]}},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -57,14 +81,18 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/11-combined-allTwo.js')}
+steps={[
+{notes:''},
+{tokens:{4: [4,9]}},
+{tokens:{5: [4,9]}},
+{tokens:{6: [5,7], 7:[5,7]}},
+{notes: ``}
+]}
 />
 
 ```notes
-This is looking pretty good already, and we should be proud of what we achieved, but there is some more room for improvement that can make your code even better:
-
-- every time we're creating an arrow function we're passing the function parameter straight to as function argument, the keyword to describe the parameter-argument mapping is point.
-
-Wouldn't be awesome if we could remove some of that visual clutter?
+This is pretty good already
+A point is a parameter-argument mapping
 ```
 ---
 <CodeSurfer
@@ -74,8 +102,17 @@ lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/12-point-free.js')}
+steps={[
+{notes:''},
+{tokens:{4: [2,4]}},
+{tokens:{5: [2,4]}},
+{tokens:{6: [2,4]}},
+{notes: `Point Free 🎉`}
+]}
 />
 
 ```notes
-Introducing point free stlye! By removin the callback function in map, filter and reduce we removed that point, and we're passing the callback function straight through  the end result is the same but our code is much more readable now, we don't have to some unecessary brain work and reason with the callback function, we can fluently read the source code like a story and fully undestand what's happening, if we're really interested in reading how the callback functions are implemented we can then look at them and reason with them as single pure function 
+By passing the callback in we removed the point
+removed clutter 
+more readable like a story
 ```
