@@ -8,19 +8,35 @@ import Codemotion from './../layout/CodemotionLayout'
 import ImageOnlyLayout from './../layout/ImageOnlyLayout'
 import Skyscanner from './../layout/SkyscannerLayout'
 
+# Data Processing: Reduce
 
+
+The `reduce()` method executes a reducer function on each member of the array resulting in a single output value.
+
+```notes
+Combining or reducing two values into one
+```
+---
 export default ImageOnlyLayout
 
 ## Reduce
+A simple example: Summing the number in an array.
 <img style={{minWidth:'50%'}} src='./assets/Reduce.svg' />
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Summing the elments of a list 🙅"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/07-01CanonicalreduceImperative.js')}
+steps={[
+{notes:'A for loop is one of the most imperative ways to do this'},
+{lines:[1]},
+{lines:[2]},
+{range:[4,6]},
+{lines:[8]},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -28,12 +44,22 @@ Imperative way for loop
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='More functional way'
+title="Summing the elments of a list 👌"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/07-02CanonicalreduceFunctionalOne.js')}
+steps={[
+{notes:'A functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{3: [8,9,10,11,12,13,14,15,16, 17],
+4:[0,1,2,3,4,5,6,7]}},
+{tokens:{5: [4]}},
+{tokens:{3: [2]}},
+{lines:[7]},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -41,12 +67,22 @@ Functional way reduce
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Even better functional way'
+title="Summing the elments of a list 💯"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/07-03CanonicalreduceFunctionalTwo.js')}
+steps={[
+{notes:'Even better functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{4: [8,9,10,11,12,13,14]}},
+{range:[8,10]},
+{tokens:{5: [1]}},
+{tokens:{3: [2]}},
+{lines:[12]},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -54,8 +90,8 @@ Even better FP
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real world imperative way"
+notes='A for loop is one of the most impertative way to go through a list'
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -67,8 +103,7 @@ more real life imperative
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real world functional way"
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -80,8 +115,7 @@ more real life functional
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real world even more functional"
 lang='javascript'
 theme={codeTheme}
 showNumbers

@@ -35,6 +35,7 @@ steps={[
 {lines:[2]},
 {range:[4,8]},
 {range:[10,11]},
+{notes: `Done!`}
 ]}
 />
 
@@ -55,6 +56,7 @@ steps={[
 {tokens:{3: [8,9,10,11,12,13,14,15,16, 17]}},
 {tokens:{3: [2]}},
 {range:[5,6]},
+{notes: `Done!`}
 ]}
 />
 
@@ -63,12 +65,21 @@ Functional way filter
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Even better functional way'
+title="Filter out odd numbers 💯"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/05-03CanonicalfilterFunctionalTwo.js')}
+steps={[
+{notes:'Even better functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{3: [8,9,10,11,12,13,14]}},
+{range:[8,9]},
+{tokens:{3: [2]}},
+{range:[5,6]},
+{notes: `Done!`}
+]}
 />
 
 ```notes
@@ -76,8 +87,8 @@ Even better FP
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real World imperative way"
+notes='A for loop is one of the most impertative way to go through a list'
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -89,8 +100,7 @@ more real life imperative
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real World functional way"
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -102,8 +112,7 @@ more real life functional
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Real World even more functional"
 lang='javascript'
 theme={codeTheme}
 showNumbers
