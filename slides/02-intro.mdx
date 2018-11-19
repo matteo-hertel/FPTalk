@@ -8,6 +8,12 @@ import Codemotion from './../layout/CodemotionLayout'
 import ImageOnlyLayout from './../layout/ImageOnlyLayout'
 import Skyscanner from './../layout/SkyscannerLayout'
 
+# Functional Programming 
+```notes
+Today I want to talk about FP, and why you should cosider usinng it
+This talk aims to make the people understand what Functional Programming is and what it stands for and hopefully give you some real world tips that you can use in your code today. 
+```
+---
 ## We'll cover: 
 <ul>
 <Appear>
@@ -18,30 +24,24 @@ import Skyscanner from './../layout/SkyscannerLayout'
 </ul>
 
 ```notes
-This is not a comprehensive FP talk, I don't even think I'm able to run an in-depth talk about FP.
-
-This talk aims to make the people understand what Functional Programming is and what it stands for and hopefully give you some real world tips that you can use in your code today. 
-
-We'cover three main areas:
+We'll cover three main areas:
 - The one reason I think functional programming makes my code better, there are so many things that we can talk about but I chose to focus on only one that in my opinion is the most important
-- There will be no math in this talk but I'd like to cover some of the fundamental keywords about functional programming to make the communication more effective
+- I'd like to cover some of the fundamental keywords about functional programming to make the communication more effective, no math tough I promise
 - I'll then show you how you can start using what we'll cover in your code
 ```
 ---
-<Image size='80%' src='./assets/door.jpg' />
-
+# Warning: Danger ahead ⚠️
 ```notes
-Before talking about the one reason functional programming makes code better a little disclaimer: This is not a comprehensive functional programming talk, this talk is  what I learnt from banging my head against the wall for past couple of years and help you not doing the same
-
-Also, when I wrote "the one reason" in the slide I had to put a Matrix reference or could not  live wiht myself
+Before we go any further a little disclaimer: This is not a comprehensive functional programming talk, this talk is  what I learnt from banging my head against the wall for past couple of years and help you not doing the same, if you are a functional programmer you might want to cover your eyes and ears now
 ```
 ---
-## The one reason why I think <br /> FP makes code better
-
+## The one reason to use a Functional Programming? <br /> It will SHOCK you
+ 
 <img style={{minWidth: '50%'}} src='./assets/source.jpg' />
 
 ```notes
 Time slot 4 minutes
+Apologies for the clicbait title
 ```
 ---
 ## FP is declarative rather than imperative
@@ -53,19 +53,13 @@ Time slot 4 minutes
 </ul>
 
 ```notes
-It can be simply explained like this: FP is declarative rather than imperative.
-
-Hopefully I didn't let you down if you were expecting some secret magic reason but this, in my view, is the best reason.
-
-What's impertative? Imperative is telling the computer how to achieve something.
-What's declarative? Declartive is telling  the computer what should happen.
-
-It turns out the human brain is exceptiaally good at figure out what needs to happen but is not very capable of getting there in the most efficient way, but it also turnes out the computer is unbelivably good and following instructions so we should let the computer doing it's thing and not getting in it's way too much.
-
-When talking about imperative vs declarative there is one example that made me go ah-ha: Writing CSS.
-When I write CSS properties I describe what something should look like rather than how to make that happen, if I set the backgorund colour of this slide to be a lovely gradient I'm not telling the CSS engine how to set the colour of the different pixels but only what it should look like 
-
-I struggled a lot to find an example that wasn't the usual for loop to show the impertative approach and and the use of the map function to show the declarative approach so I went for something different but hopefully will send a better message: Testing Frameworks
+- Recent studies demonstrate that the
+- human brain good at figuring out what should happen
+- but not how to do efficiently 
+- computer is exceptionally good at following instructions 
+- ah-ha moment: CSS engine
+- Struggled to find a good example that is not the usual for loop 
+- testing framewors 
 ```
 ---
 <CodeSurfer
@@ -87,9 +81,14 @@ steps={
 />
 
 ```notes
-Have a look at this snippet, the first part is using an imperative approach, store the return value od the getAnswer function, check if it's 42, if is not throw an error otherwise return true, we're telling the testing framework how to do its job line by line.
+- imperative step though
+- declarative: beautiful
+```
+---
+# Terminology 👩‍🏫
 
-Look at the second part now, we're telling the testing framework what should happen, with  the added bonus of using a fluent english syntax we're expecting the result of getAnswer, to be 42, it doesn't get more declarative that that! 
+```notes
+terminology: to make communication more effective
 ```
 ---
 ## Pure Function
@@ -102,7 +101,7 @@ Look at the second part now, we're telling the testing framework what should hap
 </ul>
 
 ```notes
-ynow as promised, some terminology:
+Every functional programming talk has to start with the function in particular the types of functions we'll use
 
 A pure function is a function that satisfies the following conditions:
 
@@ -117,12 +116,16 @@ Here an example of an pure function
 title="Pure function"
 lang='javascript'
 theme={codeTheme}
+notes={'Same input === same output and no side effects'}
 showNumbers
 code={require('raw-loader!./../snippets/02-00-function-purity.js')}
 />
 
 ```notes
-Why do we care about function purity? The immediate benefit of a function that always returns the same value given the same input and doen't have side effect is super easy to reson with 
+Why function purity
+- easy to reason with
+- easy to reuse
+- easy to test
 ```
 ---
 <CodeSurfer
@@ -134,8 +137,9 @@ code={require('raw-loader!./../snippets/02-01-function-purity.js')}
 />
 
 ```notes
-An impure function like this one makes impossible to predict out of the context of the sorrounding code, we have to read it, keep track of what it's doing and read on, unfortunately we as humans are very bad at doing that, it might work on a 10 lines of code snippet but what if this was 200 lines of code snippet?
+An impure function like this one makes impossible to predict out of the context of the sorrounding code.
 
+You have to read the whole code to undestand what's happening, now some of you JS expert might argue about using const rather than let
 (next)
 ```
 ---
@@ -148,26 +152,26 @@ code={require('raw-loader!./../snippets/02-02-function-purity.js')}
 />
 
 ```notes
-Some of you might say, well I'll just use const in my code and I'm good, unfortunately that's not always the case, arrays and objects are passed by reference in JavaScript so you can find yourself in a situation like this one. 
-
-And let's get some terminology out of the way:
+ arrays and objects are passed by reference in JavaScript so you can find yourself in a situation like this one. 
 ```
 ---
 ## Expression of Intent
 
 <Appear>
-<span>Predicate, </span>
-<span>Mapper</span>
+<span>Mapper, </span>
+<span>Predicate</span>
 <span> and Reducer Functions</span>
 </Appear>
 
 ```notes
+
 There are some specific names in functional programming that make the communication much easier, for instance:
-- A predicate function, a function that returns either true or false
 
 - A mapper function, a function that transforms the input and returns an output
 
+- A predicate function, a function that returns either true or false
+
 - A reducer function, a function that combines (or reduces) two values into one 
 
-Now this might be a lot to take in in one go but don't worry, I'll explain it a bit better when we'll go through some code.
+Not spending too much time now as it'll be clear later on
 ```

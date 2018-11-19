@@ -9,6 +9,13 @@ import ImageOnlyLayout from './../layout/ImageOnlyLayout'
 import Skyscanner from './../layout/SkyscannerLayout'
 
 
+# Data Processing: Map
+The `map()` method creates a new array with the results of a mapping function executed against every element of an array.
+
+```notes
+Mapping is 1 to 1
+```
+---
 export default ImageOnlyLayout
 
 ## Map
@@ -16,7 +23,7 @@ A simple example: Double the numbers in an array.
 <img style={{minWidth:'50%'}} src='./assets/Map.svg' />
 ---
 <CodeSurfer
-title="Doubling the numbers in a list: 🙅"
+title="Doubling the numbers in a list 🙅"
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -25,7 +32,7 @@ steps={[
 {notes:'A for loop is one of the most imperative ways to do this'},
 {lines:[1]},
 {lines:[2]},
-{range:[4,5,6]},
+{range:[4,6]},
 {range:[8,9]},
 ]}
 />
@@ -35,7 +42,7 @@ A for loop is one of the most imperative ways to this
 ```
 ---
 <CodeSurfer
-title="Doubling the numbers in a list 🤔"
+title="Doubling the numbers in a list 👌"
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -45,6 +52,7 @@ steps={[
 {lines:[1]},
 {tokens:{3: [4,5,6]}},
 {tokens:{3: [8,9,10,11,12,13]}},
+{tokens:{3: [2]}},
 {range:[5,6]},
 ]}
 />
@@ -65,9 +73,9 @@ steps={[
 {lines:[1]},
 {tokens:{3: [4,5,6]}},
 {tokens:{3: [8,9,10,11,12,13]}},
+{range:[8,9]},
 {tokens:{3: [2]}},
 {range:[5,6]},
-{range:[8,9]},
 ]}
 />
 
@@ -89,8 +97,7 @@ more real life imperative
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Functional Way"
 lang='javascript'
 theme={codeTheme}
 showNumbers
@@ -102,8 +109,7 @@ more real life functional
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='Imperative way'
+title="Even more functional"
 lang='javascript'
 theme={codeTheme}
 showNumbers

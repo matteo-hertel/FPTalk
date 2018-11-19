@@ -1,5 +1,7 @@
 import {
   colorBlue900,
+  colorGray300,
+  colorRed300,
   colorGray900,
   colorGreen500,
   colorWhite,
@@ -27,10 +29,7 @@ export default {
   colors: {
     text: colorWhite,
     link: colorBlue900,
-    pre: colorGray900,
-    preBackground: colorGreen500,
-    code: colorGray900,
-    codeBackground: colorGreen500,
+    code: colorRed300,
   },
   css: {
     background: baseGradient,

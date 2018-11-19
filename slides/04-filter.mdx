@@ -8,19 +8,34 @@ import Codemotion from './../layout/CodemotionLayout'
 import ImageOnlyLayout from './../layout/ImageOnlyLayout'
 import Skyscanner from './../layout/SkyscannerLayout'
 
+# Data Processing: Filter
+The `filter()` method creates a new array with all elements that pass the test of a predicate function. 
+
+```notes
+filter is shrinking down the list
+```
+---
 
 export default ImageOnlyLayout
 
 ## Filter
+A simple example: Filter out odd numbers.
 <img style={{minWidth:'50%'}} src='./assets/Filter.svg' />
 ---
 <CodeSurfer
-title="💡"
+title="Filter out odd numbers 🙅"
 notes='Imperative way'
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/05-01CanonicalfilterImperative.js')}
+steps={[
+{notes:'A for loop is one of the most imperative ways to do this'},
+{lines:[1]},
+{lines:[2]},
+{range:[4,8]},
+{range:[10,11]},
+]}
 />
 
 ```notes
@@ -28,12 +43,19 @@ Imperative way for loop
 ```
 ---
 <CodeSurfer
-title="💡"
-notes='More functional way'
+title="Filter out odd numbers 👌"
 lang='javascript'
 theme={codeTheme}
 showNumbers
 code={require('raw-loader!./../snippets/05-02CanonicalfilterFunctionalOne.js')}
+steps={[
+{notes:'A functional approach'},
+{lines:[1]},
+{tokens:{3: [4,5,6]}},
+{tokens:{3: [8,9,10,11,12,13,14,15,16, 17]}},
+{tokens:{3: [2]}},
+{range:[5,6]},
+]}
 />
 
 ```notes
