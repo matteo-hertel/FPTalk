@@ -1,5 +1,6 @@
 function square() {
   squared = Math.pow(number, 2);
+  return squared;
 }
 
 let squared, number;
