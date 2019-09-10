@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@rebass/grid": "^6.0.0-4",
-    "bpk-tokens": "^27.2.0",
+    "bpk-tokens": "^27.10.0",
     "emotion": "^9.2.12",
     "mdx-deck": "^1.7.10",
     "mdx-deck-code-surfer": "^0.5.3",
