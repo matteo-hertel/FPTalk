@@ -18,7 +18,7 @@
     "mdx-deck": "^1.7.10",
     "mdx-deck-code-surfer": "^0.5.3",
     "prettier": "^1.15.2",
-    "raw-loader": "^0.5.1",
+    "raw-loader": "^4.0.2",
     "react-emotion": "^9.2.12",
     "react-icons": "^3.2.2"
   },
